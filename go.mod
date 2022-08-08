@@ -1,4 +1,4 @@
-module rpc-prototype-server
+module github.com/dmdv/rpc-prototype-server
 
 go 1.18
 

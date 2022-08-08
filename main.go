@@ -4,8 +4,8 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"github.com/dmdv/rpc-prototype-server/pkg"
 	"github.com/smallnest/rpcx/server"
-	"rpc-prototype-server/pkg"
 )
 
 var (
