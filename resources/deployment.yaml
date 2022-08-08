@@ -1,0 +1,27 @@
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rpcx-server
+  labels:
+    app: rpcx-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rpcx-server
+  template:
+    metadata:
+      labels:
+        app: rpcx-server
+    spec:
+      containers:
+      - name: rpcx-server
+        image: rpcx-server:latest
+        ports:
+        - containerPort: 8972
+          name: tcp
+        envFrom:
+        - configMapRef:
+            name: rpcx-server-env

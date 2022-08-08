@@ -1,0 +1,17 @@
+apiVersion: skaffold/v2beta29
+kind: Config
+metadata:
+  name: rpcx-server
+build:
+  artifacts:
+  - image: rpcx-server
+    context: .
+    docker: {}
+deploy:
+  kubectl:
+    manifests:
+    - resources/*.yaml
+profiles:
+- name: Dima
+  build:
+    cluster: {}

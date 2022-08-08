@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: rpcx-server
+    labels:
+        app: rpcx-server
+spec:
+    clusterIP: None
+    ports:
+        - port: 8972
+          name: rpcx-server
+    selector:
+        app: rpcx-server
